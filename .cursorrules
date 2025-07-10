@@ -1,0 +1,37 @@
+{
+  "vue": {
+    "version": "3",
+    "features": ["compositionApi", "scriptSetup", "vueUse"]
+  },
+  "typescript": {
+    "enable": true,
+    "strict": true
+  },
+  "buildTools": {
+    "vite": {
+      "integrations": {
+        "rolldown": {
+          "enable": true,
+          "customOptions": {
+            "optimizeDeps": true,
+            "hotModuleReplacement": true
+          }
+        }
+      }
+    }
+  },
+  "pnpm": {
+    "monorepo": true
+  },
+  "linting": {
+    "tool": "oxlint",
+    "autoFixOnSave": true
+  },
+  "gitHooks": {
+    "tool": "husky",
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
+    }
+  }
+}

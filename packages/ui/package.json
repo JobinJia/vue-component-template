@@ -1,0 +1,37 @@
+{
+  "name": "@tsdown-lib-template/ui",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.12.4",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "development": "./src/components/index.ts",
+      "default": "./dist/components/index.js"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/components/index.js",
+  "module": "./dist/components/index.js",
+  "types": "./dist/components/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "exports": {
+      ".": "./dist/components/index.js",
+      "./*": "./*"
+    }
+  },
+  "scripts": {
+    "build:css": "unocss 'src/**/*.{vue,ts,tsx}' -o dist/components/index.css",
+    "build": "rm -rf dist && tsdown && pnpm run build:css",
+    "dev": "tsdown --watch",
+    "typecheck": "vue-tsc --noEmit",
+    "release": "bumpp && pnpm publish"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.13"
+  }
+}

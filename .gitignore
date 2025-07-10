@@ -1,0 +1,67 @@
+# 依赖
+node_modules/
+.pnpm-store/
+
+# 构建输出
+dist/
+build/
+*.tsbuildinfo
+
+# 日志文件
+*.log
+logs/
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# 运行时数据
+.npm
+.eslintcache
+.stylelintcache
+
+# 覆盖率报告
+coverage/
+.nyc_output/
+
+# 编辑器配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 环境文件
+.env
+.env.local
+.env.*.local
+
+# 临时文件
+*.tmp
+*.temp
+temp/
+tmp/
+
+# 缓存文件
+.cache/
+.parcel-cache/
+.vite/
+
+# 测试相关
+.jest/
+test-results/
+playwright-report/
+
+# 包管理器锁文件（如果需要忽略的话）
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml 
