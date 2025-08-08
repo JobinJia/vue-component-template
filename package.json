@@ -20,7 +20,8 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "deps:check": "taze -r",
-    "deps:install": "taze -r -w --install"
+    "deps:install": "taze -r -w --install",
+    "deps:major": "taze -r major -w --install"
   },
   "peerDependencies": {
     "vue": "catalog:dev"
