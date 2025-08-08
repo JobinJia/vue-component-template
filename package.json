@@ -27,6 +27,9 @@
     "vue": "catalog:dev"
   },
   "devDependencies": {
+    "@commitlint/cli": "catalog:dev",
+    "@commitlint/config-conventional": "catalog:dev",
+    "@commitlint/types": "catalog:dev",
     "@jobinjia/eslint-config": "catalog:dev",
     "@types/node": "catalog:dev",
     "@unocss/cli": "catalog:dev",
