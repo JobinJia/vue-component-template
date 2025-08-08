@@ -2,7 +2,7 @@
   "name": "@tsdown-lib-template/ui",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.14.0",
   "license": "MIT",
   "exports": {
     ".": {
@@ -27,11 +27,12 @@
   "scripts": {
     "build:css": "unocss 'src/**/*.{vue,ts,tsx}' -o dist/components/index.css",
     "build": "rm -rf dist && tsdown && pnpm run build:css",
-    "dev": "tsdown --watch",
+    "dev:js": "tsdown --watch",
+    "dev": "run-p dev:js \"build:css --watch\"",
     "typecheck": "vue-tsc --noEmit",
     "release": "bumpp && pnpm publish"
   },
   "peerDependencies": {
-    "vue": "^3.5.13"
+    "vue": "catalog:dev"
   }
 }

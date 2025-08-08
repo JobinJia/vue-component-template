@@ -5,6 +5,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 // import '@unocss/reset/tailwind.css'
 // import 'virtual:uno.css'
-import '@tsdown-lib-template/ui/index.css'
+import '@tsdown-lib-template/ui/dist/components/index.css'
 
 createApp(App).use(ui).mount('#app')

@@ -5,6 +5,6 @@ const value = ref('')
 </script>
 
 <template>
-  <Input v-model="value" />
+  <Input v-model="value" type="datetime-local" />
   {{ value }}
 </template>
